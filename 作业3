@@ -1,0 +1,14 @@
+说到这个问题肯定是我们这些程序员经常遇到的问题，当我们遇到这个问题时我们可以用下面这个方法来解决。
+
+1.以系统管理员身份登陆系统。
+2.打开cmd-----net start 查看mysql是否启动。启动的话就停止net stop mysql.
+3.我的mysql安装在d:\usr\local\mysql4\bin下。
+4.跳过权限检查启动mysql.
+d:\usr\local\mysql\bin\mysqld-nt --skip-grant-tables
+5.重新打开cmd。进到d:\usr\local\mysql4\bin下：
+d:\usr\local\mysql\bin\mysqladmin -u root flush-privileges password "newpassword"
+d:\usr\local\mysql\bin\mysqladmin -u root -p shutdown  这句提示你重新输密码。
+6.在cmd里net start mysql
+
+还有就是可以查找百度看各种资料来找新的方法，
+如果你是学生那就更简单了直接找老师让老师帮你解决。
